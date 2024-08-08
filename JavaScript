@@ -1,0 +1,46 @@
+function generateTable() {
+    // creates a <table> element and a <tbody> element
+    const tbl = document.createElement("table");
+    const tblBody = document.createElement("tbody");
+  
+    // creating all cells
+    for (let i = 0; i < 2; i++) {
+      // creates a table row
+      const row = document.createElement("tr");
+  
+      for (let j = 0; j < 2; j++) {
+        // Create a <td> element and a text node, make the text
+        // node the contents of the <td>, and put the <td> at
+        // the end of the table row
+        const cell = document.createElement("td");
+        const cellText = document.createTextNode(`cell in row ${i}, column ${j}`);
+        cell.appendChild(cellText);
+        row.appendChild(cell);
+      }
+  
+      // add the row to the end of the table body
+      tblBody.appendChild(row);
+    }
+  
+    // put the <tbody> in the <table>
+    tbl.appendChild(tblBody);
+    // appends <table> into <body>
+    document.body.appendChild(tbl);
+    // sets the border attribute of tbl to '2'
+    tbl.setAttribute("border", "4");
+  }
+
+
+  // Everytime that you were to click on the button to generate the table. It takes the table contents and the body of those elements.
+
+  // It creates all of the cells and rows needed for the table generated.
+
+  // To create the text within the lines of code, the const cellText uses a createTextNode within the parameter to generate that text
+  
+  // Next, there would be a appendChild to both the cell and cellText, allowing both of the elements of code to be inside that table
+
+  // Next you would have to set the tbody or cell data into the table by using tbl.appendChild with the parameter of that constant element.
+
+  // Set the table into the body by writing in document.body.appendChild with the parameter that was used to set the tbody to table.
+
+  // Lastly, set the thickness of the border by writing in the setAttribute method with the parameters that express what it is needed to change the thickness of the border.
